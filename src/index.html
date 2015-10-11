@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>NG TWO</title>
+    <script src="vendor/traceur-runtime.js"></script>
+    <script src="vendor/system@0.16.7.js"></script>
+    <script src="vendor/angular2.js"></script>
+    <link href="vendor/angular-material.css" rel="stylesheet" />
+    <link href="vendor/custom.style.css" rel="stylesheet" />
+</head>
+
+<body layout="row">
+    <app flex layout="row"></app>
+    <script>
+        System.config({
+            traceurOptions: {
+                annotations: true,
+                memberVariables: true,
+                types: true,
+                typeAssertions: true,
+                typeAssertionModule: './vendor/rtts_assert'
+            },
+            paths: {
+                '*': '*.js',
+                'angular2/*': 'angular2/*'
+            }
+        });
+        System.import('./main.es6');
+    </script>
+</body>
+
+</html>
