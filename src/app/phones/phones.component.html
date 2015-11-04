@@ -1,0 +1,13 @@
+<div>
+  <h2>My Phones</h2>
+  <filter-text [text]="filterText" (changed)="filterChanged($event)"></filter-text>
+  <ul class="phones">
+    <li *ng-for="#phone of filteredPhones #i=index" [ng-class]="getSelectedClass(phone)" (click)="onSelect(phone)">
+      <span class="badge">{{i+1}}</span> {{phone.name}}</a>
+    </li>
+  </ul>
+  <div *ng-if="selectedPhone">
+    <h2>{{selectedPhone.name}}</h2>
+    <button (click)="goDetail()">View Details</button>
+  </div>
+</div>

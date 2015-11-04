@@ -1,33 +1,24 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
-    <title>NG TWO</title>
-    <script src="vendor/traceur-runtime.js"></script>
-    <script src="vendor/system@0.16.7.js"></script>
-    <script src="vendor/angular2.js"></script>
-    <link href="vendor/angular-material.css" rel="stylesheet" />
-    <link href="vendor/custom.style.css" rel="stylesheet" />
+  <base href="/src/" />
+  <link rel="stylesheet" href="./assets/angular-material.css">
+  <link rel="stylesheet" href="./assets/custom.style.css">
+  <script src="../node_modules/systemjs/dist/system.src.js"></script>
+  <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script src="../node_modules/angular2/bundles/router.dev.js"></script>
+  <script src="../node_modules/angular2/bundles/http.dev.js"></script>
+  <script>
+    System.config({
+      packages: {'app': {defaultExtension: 'js'}}
+    });
+    System.import('app/bootstrap').catch(console.log.bind(console));
+  </script>
 </head>
 
-<body layout="row">
-    <app flex layout="row"></app>
-    <script>
-        System.config({
-            traceurOptions: {
-                annotations: true,
-                memberVariables: true,
-                types: true,
-                typeAssertions: true,
-                typeAssertionModule: './vendor/rtts_assert'
-            },
-            paths: {
-                '*': '*.js',
-                'angular2/*': 'angular2/*'
-            }
-        });
-        System.import('./main.es6');
-    </script>
+<body>
+  <app>Loading...</app>
 </body>
 
 </html>

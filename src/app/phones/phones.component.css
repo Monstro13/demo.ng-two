@@ -1,0 +1,22 @@
+.phones {    
+	list-style-type: none;
+    margin-left: 0em;
+    padding: 0px;
+    width: 20em;
+}
+
+.phones li { cursor: pointer; position: relative; left: 0; transition: all 0.2s ease; }
+
+.phones li:hover {color: #369; background-color: #EEE; left: .2em;}
+
+.phones .badge {
+	font-size: small;
+	color: white;
+	padding: 0.1em 0.7em;
+	background-color: #369;
+	line-height: 1em;
+	position: relative;
+	left: -1px;
+	top: -1px;
+}
+.selected { background-color: #EEE; color: #369; }
