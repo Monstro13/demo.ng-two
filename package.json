@@ -1,5 +1,5 @@
 {
-  "name": "angular2-there-and-back-again",
+  "name": "ngTwo",
   "version": "0.0.1",
   "scripts": {
     "tsc": "tsc -p src -w",

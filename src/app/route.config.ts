@@ -1,5 +1,5 @@
-import {PhonesComponent} from './phones/phones.component';
-import {PhoneDetailComponent} from './phone-detail/phone-detail.component';
+import {PhonesComponent} from './components/phones/phones.component';
+import {PhoneDetailComponent} from './components/phone-detail/phone-detail.component';
 
 export var Routes = {
 	phones: {

@@ -1,17 +1,17 @@
 import {Component, CORE_DIRECTIVES, OnInit} from 'angular2/angular2';
 import {Router} from 'angular2/router';
-import {Phone} from '../core/phone';
+import {Phone} from '../../core/phone';
 import {PhoneDetailComponent} from '../phone-detail/phone-detail.component';
-import {PhoneService} from '../core/phone.service';
-import {FilterService} from '../blocks/filter.service';
-import {FilterTextComponent} from '../blocks/filter-text.component';
-import {Routes} from '../route.config';
+import {PhoneService} from '../../core/phone.service';
+import {FilterService} from '../../blocks/filter.service';
+import {FilterTextComponent} from '../../blocks/filter-text.component';
+import {Routes} from '../../route.config';
 
 @Component({
   selector: 'phones',
-  templateUrl: './app/phones/phones.component.html',
+  templateUrl: './app/components/phones/phones.component.html',
   directives: [PhoneDetailComponent, CORE_DIRECTIVES, FilterTextComponent],
-  styleUrls: ['./app/phones/phones.component.css']
+  styleUrls: ['./app/components/phones/phones.component.css']
 })
 export class PhonesComponent implements OnInit {
   public phones: Phone[];
